@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Menu from "./Components/Menu";
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons'
+import Footer from "./Components/Footer";
 
 library.add(faTimes, faBars);
 
@@ -28,7 +29,7 @@ const App = () => {
         </h1>
         <img src={"https://unsplash.it/200/200"} />
       </Content>
-      {/*<Footer />*/}
+      <Footer />
     </Wrapper>
   );
 };
