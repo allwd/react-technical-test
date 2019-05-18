@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Header from "./Components/Header";
+import Menu from "./Components/Menu";
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons'
 
-function App() {
+library.add(faTimes, faBars);
+
+const Wrapper = styled.div`
+`;
+
+const Content = styled.div`
+  padding: 20px;
+  text-align: center;
+`;
+
+const App = () => {
+  const [show, toggleMenu] = React.useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Header menu={show} onClick={() => toggleMenu(!show)}/>
+      <Menu show={show}/>
+      <Content>
+        <h1>
+          Some content
+        </h1>
+        <img src={"https://unsplash.it/200/200"} />
+      </Content>
+      {/*<Footer />*/}
+    </Wrapper>
   );
-}
+};
 
 export default App;
