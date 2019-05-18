@@ -27,9 +27,9 @@ const App = () => {
         <h1>
           Some content
         </h1>
-        <img src={"https://unsplash.it/200/200"} />
+        <img src={"https://unsplash.it/200/200"}/>
       </Content>
-      <Footer />
+      <Footer/>
     </Wrapper>
   );
 };

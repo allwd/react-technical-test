@@ -6,8 +6,8 @@ const ImageWrapper = styled.div`
   border-radius: 50%;
   border: 3px solid white;
   background: #ee5f63;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   position: relative;
   overflow: hidden;
 `
