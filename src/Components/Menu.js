@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
+import Profile from "./Profile";
 
 const AnimationWrapper = styled.div`
   position: absolute;
@@ -13,7 +14,7 @@ const AnimationWrapper = styled.div`
 
 const Menu = ({...rest}) => (
   <AnimationWrapper {...rest}>
-    Test
+    <Profile />
   </AnimationWrapper>
 );
 
