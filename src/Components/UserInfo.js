@@ -9,12 +9,18 @@ const Wrapper = styled.div`
   align-items: center;
   flex: 1 0 auto;
   text-align: center;
+  @media (min-width: ${devices.tablet}) {
+    font-size: 19px;
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
 `
 
 const Info = styled.div`
   margin: 10px 0 30px;
   @media (min-width: ${devices.tablet}) {
-    margin-left: 20px; // for desktop
+    margin: 0 0 0 15px;
   }
 `
 
@@ -22,12 +28,23 @@ const Data = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 25px;
+  @media (min-width: ${devices.tablet}) {
+    font-size: unset;
+    flex-direction: row-reverse;
+  }
 `
 
 const Span = styled.span`
-    font-size: 30px;
+  font-size: 30px;
+  @media (min-width: ${devices.tablet}) {
+    font-size: 19px;
+    font-weight: bold;
+  }
   &:nth-child(1n) {
     display: none;
+    @media (min-width: ${devices.tablet}) {
+      display: inline-block;
+    }
   }
   &:first-child {
     display: inline-block;
@@ -40,6 +57,16 @@ const BalanceSpan = styled.span`
   }
 `
 
+const Price = styled.div`
+  @media (min-width: ${devices.tablet}) {
+    font-weight: bold;
+    &::after {
+      content: ' ';
+      white-space: pre;
+    }
+  }
+`
+
 const UserInfo = () => {
   return (
     <Wrapper>
@@ -47,16 +74,15 @@ const UserInfo = () => {
       <Info>
         <div>
           <Span>Dominik</Span>
-          <Span> Biel</Span>
-          <Span> Biel</Span>
+          <Span>&nbsp;Biel</Span>
         </div>
         <Data>
           <div>
             Available<BalanceSpan>&nbsp;Balance</BalanceSpan>
           </div>
-          <div>
+          <Price>
             £1,500.00
-          </div>
+          </Price>
         </Data>
       </Info>
     </Wrapper>
