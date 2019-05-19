@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from './Avatar';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {devices} from "../Theme/devices";
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,8 +12,10 @@ const Wrapper = styled.div`
 `
 
 const Info = styled.div`
-  margin-top: 10px;
-  //margin-left: 20px; // for desktop
+  margin: 10px 0 30px;
+  @media (min-width: ${devices.tablet}) {
+    margin-left: 20px; // for desktop
+  }
 `
 
 const Data = styled.div`
@@ -32,7 +35,9 @@ const Span = styled.span`
 `
 
 const BalanceSpan = styled.span`
-  //display: none;
+  @media (min-width: ${devices.tablet}) {
+    display: none;
+  }
 `
 
 const UserInfo = () => {

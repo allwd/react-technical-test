@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {devices} from "../Theme/devices";
 
 const FixedPosition = styled.div`
   position: fixed;
@@ -18,7 +19,12 @@ const Wrapper = styled.div`
   color: white;
   font-size: 32px;
   position: relative;
-  min-height: 50px;
+  min-height: 55px;
+  @media (min-width: ${devices.tablet}) {
+    align-items: flex-start;
+    font-size: 19px;
+    min-height: 90px;
+  }
   
   &::before {
     content: '';
@@ -33,6 +39,10 @@ const Wrapper = styled.div`
 const P = styled.div`
   text-align: center;
   display: none;
+  @media (min-width: ${devices.tablet}) {
+    display: block; 
+  }
+
   
   &:first-child {
     display: block;

@@ -1,15 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../logo.svg';
+import {devices} from "../Theme/devices";
+
 
 const ImageWrapper = styled.div`
   border-radius: 50%;
-  border: 3px solid white;
   background: #ee5f63;
-  width: 45px;
-  height: 45px;
   position: relative;
   overflow: hidden;
+  width: 70px;
+  height: 70px;
+
+  @media (min-width: ${devices.tablet}) {
+    border: 3px solid white;
+    width: 45px;
+    height: 45px;
+  }
 `
 
 const Image = styled.img`
@@ -28,7 +35,7 @@ const Image = styled.img`
 const Avatar = () => {
   return (
     <ImageWrapper>
-      <Image src={logo} />
+      <Image src={logo}/>
     </ImageWrapper>
   );
 };

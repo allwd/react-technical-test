@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Header from "./Components/Header";
 import Menu from "./Components/Menu";
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons'
+import {faTimes, faBars, faUserCircle, faPlane, faCreditCard, faLifeRing, faPhone, faSignOutAlt, faQuestionCircle, faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 import Footer from "./Components/Footer";
 
-library.add(faTimes, faBars);
+
+library.add(faTimes, faBars, faUserCircle, faPlane, faCreditCard, faLifeRing, faPhone, faSignOutAlt, faQuestionCircle, faInfoCircle);
 
 const Wrapper = styled.div`
 `;
@@ -27,7 +28,7 @@ const App = () => {
         <h1>
           Some content
         </h1>
-        <img src={"https://unsplash.it/200/200"}/>
+        <img src={"https://unsplash.it/200/200"} alt={'content'}/>
       </Content>
       <Footer/>
     </Wrapper>
