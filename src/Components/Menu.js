@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import UserInfo from "./UserInfo";
 import MenuItem from "./MenuItem";
-import {library} from "@fortawesome/fontawesome-svg-core";
+import {devices} from "../Theme/devices";
 
 const AnimationWrapper = styled.div`
   position: absolute;
@@ -12,7 +12,24 @@ const AnimationWrapper = styled.div`
   transition: 0.3s;
   opacity: ${props => props.show ? '1' : '0'};
   padding: 20px 20px 130px;
+  
+  @media (min-width: ${devices.tablet}) {
+    padding: 20px;
+  }
 `;
+
+const menuItems = [ // one way to do it, but lets do it differently...
+  {
+    label: "About Us",
+    mobile: {
+      label: 'About',
+      style: {
+        order: 7 // flex order for mobile
+      },
+      icon: "question-circle"
+    }
+  }
+];
 
 const Menu = ({...rest}) => (
   <AnimationWrapper {...rest}>
