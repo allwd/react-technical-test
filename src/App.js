@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from "./Components/Header";
-import Menu from "./Components/Menu";
+import Menu from "./Components/Menu/Menu";
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faTimes, faBars, faUserCircle, faPlane, faCreditCard, faLifeRing, faPhone, faSignOutAlt, faQuestionCircle, faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 import Footer from "./Components/Footer";

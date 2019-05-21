@@ -13,7 +13,9 @@ const Wrapper = styled.div`
     font-size: 19px;
     flex-direction: row;
     text-align: left;
-    justify-content: center;
+    border-bottom: 1px solid #f0868d;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
 `
 

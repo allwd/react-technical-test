@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types';
+import {devices} from "../Theme/devices";
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +20,11 @@ const Wrapper = styled.div`
     bottom: 0;
     background: #f0868d;
     position: absolute;
+    
+    @media (min-width: ${devices.tablet}) {
+      background: white;
+      height: 2px;
+    }
   }
 `;
 
