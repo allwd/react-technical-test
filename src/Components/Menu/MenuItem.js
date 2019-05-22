@@ -2,41 +2,29 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index'
 import { devices } from '../../Theme/devices'
+import Button from '../Button'
 
 const Wrapper = styled.div`
-  padding: 20px 5px;
   font-size: 32px;
-  display: flex;
-  align-items: center;
-  user-select: none;
-  background-position: center;
-  transition: background 0.7s;
-  background-color: #ee5f63;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    background: #ff6468 radial-gradient(circle, transparent 1%, #ff6468 1%) center/22000%;
-  }
-
-  &:active {
-    background-color: #ee5f63;
-    background-size: 100%;
-    transition: background 0s;
-  }
 
   & + & {
     border-top: 1px solid #f0868d;
+    @media (min-width: ${devices.tablet}) {
+      border-top: none;
+    }
   }
+`
 
+const Item = styled.div`
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  
   @media (min-width: ${devices.tablet}) {
     padding-top: 3px;
     padding-bottom: 3px;
     font-size: 23px;
     font-weight: bold;
-    & + & {
-      border-top: none;
-    }
   }
 `
 
@@ -60,8 +48,12 @@ const Span = styled.span`
 const MenuItem = ({ children, icon, ...rest }) => {
   return (
     <Wrapper>
-      {icon && <Icon {...{ icon, ...rest }} />}
-      <Span>{children}</Span>
+      <Button>
+        <Item>
+          {icon && <Icon {...{ icon, ...rest }} />}
+          <Span>{children}</Span>
+        </Item>
+      </Button>
     </Wrapper>
   )
 }

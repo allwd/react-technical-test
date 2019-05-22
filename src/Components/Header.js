@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import { devices } from '../Theme/devices'
+import Button from './Button'
 
 const Wrapper = styled.div`
   display: flex;
@@ -46,10 +47,12 @@ const Header = ({ menu, onClick }) => (
       <div>
         <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo' />
       </div>
+      <Button>
       <CloseIconWrapper {...{ onClick }}>
-        <Icon display={menu ? 'block' : 'none'} icon={'times'} />
-        <Icon display={menu ? 'none' : 'block'} icon={'bars'} />
+          <Icon display={menu ? 'block' : 'none'} icon={'times'} />
+          <Icon display={menu ? 'none' : 'block'} icon={'bars'} />
       </CloseIconWrapper>
+      </Button>
     </Wrapper>
   </div>
 )
