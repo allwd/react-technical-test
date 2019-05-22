@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../logo.svg'
 import { devices } from '../Theme/devices'
 
 const ImageWrapper = styled.div`
@@ -12,16 +11,17 @@ const ImageWrapper = styled.div`
   height: 70px;
 
   @media (min-width: ${devices.tablet}) {
-    border: 3px solid white;
+    border: 2px solid white;
     width: 45px;
     height: 45px;
   }
 `
 
 const Image = styled.img`
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
   border-radius: 50%;
+  padding: 6px;
   margin: auto;
   top: 0;
   bottom: 0;
@@ -34,7 +34,7 @@ const Image = styled.img`
 const Avatar = () => {
   return (
     <ImageWrapper>
-      <Image src={logo} />
+      <Image src={process.env.PUBLIC_URL + '/avatar.png'} alt='Awaymo logo'/>
     </ImageWrapper>
   )
 }

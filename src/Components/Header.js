@@ -6,11 +6,9 @@ import { devices } from '../Theme/devices'
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   color: white;
-  font-size: 32px;
-  padding: 27px 20px;
+  padding: 25px 20px;
   position: relative;
 
   &::after {
@@ -45,7 +43,9 @@ const CloseIconWrapper = styled.button`
 const Header = ({ menu, onClick }) => (
   <div>
     <Wrapper>
-      <div>company/</div>
+      <div>
+        <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo'/>
+      </div>
       <CloseIconWrapper {...{ onClick }}>
         <Icon display={menu ? 'block' : 'none'} icon={'times'} />
         <Icon display={menu ? 'none' : 'block'} icon={'bars'} />

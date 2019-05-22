@@ -38,7 +38,7 @@ const Content = styled.div`
 `
 
 const App = () => {
-  const [show, toggleMenu] = React.useState(false)
+  const [show, toggleMenu] = React.useState(true)
 
   return (
     <Wrapper>
