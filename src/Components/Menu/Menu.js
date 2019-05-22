@@ -5,13 +5,12 @@ import {devices} from "../../Theme/devices";
 import MobileMenu from "./Mobile";
 import MediaQuery from 'react-responsive'
 import DesktopMenu from "./Desktop";
+import Fade from "../Transitions/Fade";
 
-const AnimationWrapper = styled.div`
+const Wrapper = styled.div`
   position: absolute;
   background: #ee5f63;
   width: calc(100% - 40px);
-  transition: 0.3s;
-  opacity: ${props => props.show ? '1' : '0'};
   padding: 20px 20px 130px;
   
   @media (min-width: ${devices.tablet}) {
@@ -20,12 +19,14 @@ const AnimationWrapper = styled.div`
   }
 `;
 
-const Menu = ({...rest}) => (
-  <AnimationWrapper {...rest}>
-    <MediaQuery query={`(min-width: ${devices.tablet})`}>
-      {matches => matches ? <DesktopMenu/> : <MobileMenu/>}
-    </MediaQuery>
-  </AnimationWrapper>
+const Menu = ({show, ...rest}) => (
+  <Fade in={show}>
+    <Wrapper {...rest}>
+      <MediaQuery query={`(min-width: ${devices.tablet})`}>
+        {matches => matches ? <DesktopMenu/> : <MobileMenu/>}
+      </MediaQuery>
+    </Wrapper>
+  </Fade>
 );
 
 Menu.propTypes = {

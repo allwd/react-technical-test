@@ -18,7 +18,7 @@ const Content = styled.div`
 `;
 
 const App = () => {
-  const [show, toggleMenu] = React.useState(true);
+  const [show, toggleMenu] = React.useState(false);
 
   return (
     <Wrapper>

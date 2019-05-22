@@ -42,10 +42,10 @@ const Span = styled.span`
   }
 `;
 
-const MenuItem = ({children, ...rest}) => {
+const MenuItem = ({children, icon, ...rest}) => {
   return (
     <Wrapper>
-      <Icon {...rest}/>
+      {icon && <Icon {...{icon, ...rest}}/>}
       <Span>
         {children}
       </Span>
