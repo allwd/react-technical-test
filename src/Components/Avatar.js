@@ -1,8 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import logo from '../logo.svg';
-import {devices} from "../Theme/devices";
-
+import React from 'react'
+import styled from 'styled-components'
+import logo from '../logo.svg'
+import { devices } from '../Theme/devices'
 
 const ImageWrapper = styled.div`
   border-radius: 50%;
@@ -35,9 +34,9 @@ const Image = styled.img`
 const Avatar = () => {
   return (
     <ImageWrapper>
-      <Image src={logo}/>
+      <Image src={logo} />
     </ImageWrapper>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar

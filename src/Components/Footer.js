@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from "styled-components";
-import {devices} from "../Theme/devices";
+import React from 'react'
+import styled from 'styled-components'
+import { devices } from '../Theme/devices'
 
 const FixedPosition = styled.div`
   position: fixed;
@@ -9,7 +9,6 @@ const FixedPosition = styled.div`
   background: #ee5f63;
   padding: 20px 20px;
   width: calc(100% - 40px);
-
 `
 
 const Wrapper = styled.div`
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
     font-size: 19px;
     min-height: 90px;
   }
-  
+
   &::before {
     content: '';
     width: 100%;
@@ -34,16 +33,15 @@ const Wrapper = styled.div`
     background: #f0868d;
     position: absolute;
   }
-`;
+`
 
 const P = styled.div`
   text-align: center;
   display: none;
   @media (min-width: ${devices.tablet}) {
-    display: block; 
+    display: block;
   }
 
-  
   &:first-child {
     display: block;
   }
@@ -60,7 +58,7 @@ const Footer = () => {
         </div>
       </Wrapper>
     </FixedPosition>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

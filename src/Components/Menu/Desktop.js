@@ -1,12 +1,12 @@
-import React from 'react';
-import UserInfo from "../UserInfo";
-import MenuItem from "./MenuItem";
+import React from 'react'
+import UserInfo from '../UserInfo'
+import MenuItem from './MenuItem'
 import styled from 'styled-components'
 
 const Left = styled.div`
   position: absolute;
   left: 15px;
-`;
+`
 
 const Center = styled.div`
   margin: 0 auto;
@@ -15,69 +15,57 @@ const Center = styled.div`
 
 const itemsLeft = [
   {
-    label: "About Us"
+    label: 'About Us'
   },
   {
-    label: "FAQ"
+    label: 'FAQ'
   },
   {
-    label: "Support"
+    label: 'Support'
   },
   {
-    label: "Contact Us"
+    label: 'Contact Us'
   }
-];
+]
 
 const itemsCenter = [
   {
-    label: "Profile"
+    label: 'Profile'
   },
   {
-    label: "My Bookings"
+    label: 'My Bookings'
   },
   {
-    label: "My Payments"
+    label: 'My Payments'
   },
   {
-    label: "Log Out"
+    label: 'Log Out'
   },
   {
-    label: "Resume Application"
+    label: 'Resume Application'
   }
-];
+]
 
 const DesktopMenu = () => (
   <>
     <Left>
-      <MenuItem>
-        Home
-      </MenuItem>
-      <MenuItem>
-        Flights
-      </MenuItem>
+      <MenuItem>Home</MenuItem>
+      <MenuItem>Flights</MenuItem>
     </Left>
     <Center>
-      <UserInfo/>
+      <UserInfo />
     </Center>
     <Left>
       {itemsLeft.map((item, index) => (
-        <MenuItem
-          key={index}
-        >
-          {item.label}
-        </MenuItem>
+        <MenuItem key={index}>{item.label}</MenuItem>
       ))}
     </Left>
     <Center>
       {itemsCenter.map((item, index) => (
-        <MenuItem
-          key={index}
-        >
-          {item.label}
-        </MenuItem>
+        <MenuItem key={index}>{item.label}</MenuItem>
       ))}
     </Center>
   </>
-);
+)
 
-export default DesktopMenu;
+export default DesktopMenu

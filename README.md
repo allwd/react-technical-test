@@ -10,7 +10,6 @@ Clone this repository in your local machine.
 
 make sure you have _npm_ installed in your machine
 
-
 ### Installing
 
 Use npm to install all the dependencies (from the project folder)
@@ -27,7 +26,7 @@ npm start
 
 ## Objectives
 
-- create fully responsive animated menu 
+- create fully responsive animated menu
 - should look good on mobile and desktop
 
 ### Desired objectives
@@ -37,6 +36,7 @@ npm start
 - use **fontawesome**
 
 ## Screen designs
-![mobile](<https://raw.githubusercontent.com/Awaymo/react-technical-test/master/design/mobile.png>)
 
-![desktop](<https://raw.githubusercontent.com/Awaymo/react-technical-test/master/design/desktop.png>)
+![mobile](https://raw.githubusercontent.com/Awaymo/react-technical-test/master/design/mobile.png)
+
+![desktop](https://raw.githubusercontent.com/Awaymo/react-technical-test/master/design/desktop.png)

@@ -1,7 +1,7 @@
-import React from 'react';
-import Avatar from './Avatar';
-import styled from 'styled-components';
-import {devices} from "../Theme/devices";
+import React from 'react'
+import Avatar from './Avatar'
+import styled from 'styled-components'
+import { devices } from '../Theme/devices'
 
 const Wrapper = styled.div`
   display: flex;
@@ -72,7 +72,7 @@ const Price = styled.div`
 const UserInfo = () => {
   return (
     <Wrapper>
-      <Avatar/>
+      <Avatar />
       <Info>
         <div>
           <Span>Dominik</Span>
@@ -82,13 +82,11 @@ const UserInfo = () => {
           <div>
             Available<BalanceSpan>&nbsp;Balance</BalanceSpan>
           </div>
-          <Price>
-            £1,500.00
-          </Price>
+          <Price>£1,500.00</Price>
         </Data>
       </Info>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default UserInfo;
+export default UserInfo
