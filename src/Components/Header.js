@@ -44,7 +44,7 @@ const Header = ({ menu, onClick }) => (
   <div>
     <Wrapper>
       <div>
-        <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo'/>
+        <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo' />
       </div>
       <CloseIconWrapper {...{ onClick }}>
         <Icon display={menu ? 'block' : 'none'} icon={'times'} />

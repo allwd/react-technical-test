@@ -34,7 +34,7 @@ const Image = styled.img`
 const Avatar = () => {
   return (
     <ImageWrapper>
-      <Image src={process.env.PUBLIC_URL + '/avatar.png'} alt='Awaymo logo'/>
+      <Image src={process.env.PUBLIC_URL + '/avatar.png'} alt='Awaymo logo' />
     </ImageWrapper>
   )
 }
