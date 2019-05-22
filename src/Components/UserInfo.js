@@ -31,6 +31,7 @@ const Data = styled.div`
   flex-direction: column;
   font-size: 25px;
   @media (min-width: ${devices.tablet}) {
+    font-weight: bold;
     font-size: unset;
     flex-direction: row-reverse;
   }

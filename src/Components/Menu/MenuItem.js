@@ -4,22 +4,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index'
 import { devices } from '../../Theme/devices'
 
 const Wrapper = styled.div`
+  padding: 20px 5px;
   font-size: 32px;
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  user-select: none;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
 
   & + & {
     border-top: 1px solid #f0868d;
-    padding-top: 20px;
   }
 
   @media (min-width: ${devices.tablet}) {
+    padding-top: 3px;
+    padding-bottom: 3px;
     font-size: 23px;
     font-weight: bold;
-    padding-bottom: 3px;
     & + & {
-      padding-top: 3px;
       border-top: none;
     }
   }
