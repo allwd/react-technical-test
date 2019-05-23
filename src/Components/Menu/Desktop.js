@@ -15,34 +15,43 @@ const Center = styled.div`
 
 const itemsLeft = [
   {
-    label: 'About Us'
+    label: 'About Us',
+    to: '/'
   },
   {
-    label: 'FAQ'
+    label: 'FAQ',
+    to: '/'
   },
   {
-    label: 'Support'
+    label: 'Support',
+    to: '/'
   },
   {
-    label: 'Contact Us'
+    label: 'Contact Us',
+    to: '/'
   }
 ]
 
 const itemsCenter = [
   {
-    label: 'Profile'
+    label: 'Profile',
+    to: '/'
   },
   {
-    label: 'My Bookings'
+    label: 'My Bookings',
+    to: '/'
   },
   {
-    label: 'My Payments'
+    label: 'My Payments',
+    to: '/'
   },
   {
-    label: 'Log Out'
+    label: 'Log Out',
+    to: '/'
   },
   {
-    label: 'Resume Application'
+    label: 'Resume Application',
+    to: '/'
   }
 ]
 
@@ -61,8 +70,8 @@ const DesktopMenu = () => (
       ))}
     </Left>
     <Center>
-      {itemsCenter.map((item, index) => (
-        <MenuItem key={index}>{item.label}</MenuItem>
+      {itemsCenter.map(({label, ...rest}, index) => ( // TODO: Add react-router
+        <MenuItem key={index} {...rest}>{label}</MenuItem>
       ))}
     </Center>
   </>

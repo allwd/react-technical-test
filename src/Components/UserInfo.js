@@ -2,6 +2,7 @@ import React from 'react'
 import Avatar from './Avatar'
 import styled from 'styled-components'
 import { devices } from '../Theme/devices'
+import { useAuth } from '../Context/Auth'
 
 const Wrapper = styled.div`
   display: flex;
@@ -71,19 +72,24 @@ const Price = styled.div`
 `
 
 const UserInfo = () => {
+  const { data } = useAuth()
+
   return (
     <Wrapper>
       <Avatar />
       <Info>
         <div>
-          <Span>Dominik</Span>
-          <Span>&nbsp;Biel</Span>
+          {data.name.split(" ").map((item, index) => (
+            <Span key={index}>
+              {index > 0 && "\u00a0"}{item}
+            </Span>
+          ))}
         </div>
         <Data>
           <div>
             Available<BalanceSpan>&nbsp;Balance</BalanceSpan>
           </div>
-          <Price>£1,500.00</Price>
+          <Price>{data.balance}</Price>
         </Data>
       </Info>
     </Wrapper>

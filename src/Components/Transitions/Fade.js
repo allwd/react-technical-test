@@ -17,7 +17,7 @@ const Fade = ({ children, timeout, ...rest }) => {
   }
 
   return (
-    <Transition {...rest}>
+    <Transition timeout={FADE_TIMEOUT} {...rest}>
       {state => (
         <div
           style={{
