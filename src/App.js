@@ -30,9 +30,9 @@ library.add(
 
 const App = () => {
   return (
-      <AuthProvider>
-        <Layout/>
-      </AuthProvider>
+    <AuthProvider>
+      <Layout />
+    </AuthProvider>
   )
 }
 

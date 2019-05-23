@@ -3,17 +3,17 @@ import React, { useState } from 'react'
 const AuthContext = React.createContext({})
 
 const testUser = {
-  name: "Dominik Biel",
-  balance: "£1,500.00",
+  name: 'Dominik Biel',
+  balance: '£1,500.00',
   avatar: process.env.PUBLIC_URL + '/avatar.png'
 }
 
-export const AuthProvider = ({...rest}) => {
+export const AuthProvider = ({ ...rest }) => {
   const [data, setData] = useState({})
   const [isAuthenticated, setAuthenticated] = useState(false)
   const [isFetching, setFetching] = useState(false)
 
-  const login = (data) => {
+  const login = data => {
     if (data === 'DominikBiel@mail.com') {
       setFetching(true)
       setTimeout(() => {
@@ -24,9 +24,7 @@ export const AuthProvider = ({...rest}) => {
     }
   }
 
-  return (
-    <AuthContext.Provider value={{data, isAuthenticated, login, isFetching}} {...rest} />
-  )
+  return <AuthContext.Provider value={{ data, isAuthenticated, login, isFetching }} {...rest} />
 }
 
 export const useAuth = () => React.useContext(AuthContext)

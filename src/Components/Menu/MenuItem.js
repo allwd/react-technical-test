@@ -19,7 +19,7 @@ const Item = styled.div`
   padding: 20px 5px;
   display: flex;
   align-items: center;
-  
+
   @media (min-width: ${devices.tablet}) {
     padding-top: 3px;
     padding-bottom: 3px;

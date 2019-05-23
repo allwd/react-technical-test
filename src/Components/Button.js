@@ -20,12 +20,8 @@ const Wrapper = styled.div`
   }
 `
 
-const Button = ({children, ...rest}) => {
-  return (
-    <Wrapper {...rest}>
-      {children}
-    </Wrapper>
-  )
+const Button = ({ children, ...rest }) => {
+  return <Wrapper {...rest}>{children}</Wrapper>
 }
 
 export default Button

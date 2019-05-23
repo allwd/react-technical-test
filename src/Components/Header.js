@@ -44,14 +44,14 @@ const CloseIconWrapper = styled.button`
 const Header = ({ menu, onClick }) => (
   <div>
     <Wrapper>
-      <Button style={{background: 'none'}}>
+      <Button style={{ background: 'none' }}>
         <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo' />
       </Button>
       <Button>
-      <CloseIconWrapper {...{ onClick }}>
+        <CloseIconWrapper {...{ onClick }}>
           <Icon display={menu ? 'block' : 'none'} icon={'times'} />
           <Icon display={menu ? 'none' : 'block'} icon={'bars'} />
-      </CloseIconWrapper>
+        </CloseIconWrapper>
       </Button>
     </Wrapper>
   </div>

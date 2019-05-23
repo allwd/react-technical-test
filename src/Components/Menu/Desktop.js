@@ -70,8 +70,13 @@ const DesktopMenu = () => (
       ))}
     </Left>
     <Center>
-      {itemsCenter.map(({label, ...rest}, index) => ( // TODO: Add react-router
-        <MenuItem key={index} {...rest}>{label}</MenuItem>
+      {itemsCenter.map((
+        { label, ...rest },
+        index // TODO: Add react-router
+      ) => (
+        <MenuItem key={index} {...rest}>
+          {label}
+        </MenuItem>
       ))}
     </Center>
   </>

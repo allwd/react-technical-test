@@ -30,9 +30,7 @@ const Layout = () => {
         </>
       ) : (
         <Content>
-          <Button onClick={() => login('DominikBiel@mail.com')}>
-            Login
-          </Button>
+          <Button onClick={() => login('DominikBiel@mail.com')}>Login</Button>
         </Content>
       )}
       <Footer />

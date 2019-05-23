@@ -79,9 +79,10 @@ const UserInfo = () => {
       <Avatar />
       <Info>
         <div>
-          {data.name.split(" ").map((item, index) => (
+          {data.name.split(' ').map((item, index) => (
             <Span key={index}>
-              {index > 0 && "\u00a0"}{item}
+              {index > 0 && '\u00a0'}
+              {item}
             </Span>
           ))}
         </div>
