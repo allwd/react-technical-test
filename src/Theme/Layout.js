@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Menu from '../Components/Menu/Menu'
 import Header from '../Components/Header'
-import Button from '../Components/Button'
+import { default as ButtonComponent } from '../Components/Button'
 import Footer from '../Components/Footer'
 import { useAuth } from '../Context/Auth'
 
@@ -11,6 +11,15 @@ const Wrapper = styled.div``
 const Content = styled.div`
   padding: 20px;
   text-align: center;
+`
+
+const Button = styled(ButtonComponent)`
+  border: 1px solid white;
+  width: 100px;
+  margin: 55px auto 0;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
 `
 
 const Layout = () => {
