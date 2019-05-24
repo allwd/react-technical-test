@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import { devices } from '../Theme/devices'
 import Button from './Button'
+import { useAuth } from '../Context/Auth'
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,21 +42,27 @@ const CloseIconWrapper = styled.button`
   font-size: 22px;
 `
 
-const Header = ({ menu, onClick }) => (
-  <div>
-    <Wrapper>
-      <Button style={{ background: 'none' }}>
-        <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo' />
-      </Button>
-      <Button>
-        <CloseIconWrapper {...{ onClick }}>
-          <Icon display={menu ? 'block' : 'none'} icon={'times'} />
-          <Icon display={menu ? 'none' : 'block'} icon={'bars'} />
-        </CloseIconWrapper>
-      </Button>
-    </Wrapper>
-  </div>
-)
+const Header = ({ menu, onClick }) => {
+  const { isAuthenticated } = useAuth()
+
+  return (
+    <div>
+      <Wrapper>
+        <Button style={{ background: 'none' }}>
+          <img src={process.env.PUBLIC_URL + '/awaymoFullWhite.svg'} alt='Awaymo'/>
+        </Button>
+        {isAuthenticated && (
+          <Button>
+            <CloseIconWrapper {...{ onClick }}>
+              <Icon display={menu ? 'block' : 'none'} icon={'times'}/>
+              <Icon display={menu ? 'none' : 'block'} icon={'bars'}/>
+            </CloseIconWrapper>
+          </Button>
+        )}
+      </Wrapper>
+    </div>
+  )
+}
 
 Header.propTypes = {
   menu: PropTypes.bool,
